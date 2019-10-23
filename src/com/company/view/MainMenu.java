@@ -6,30 +6,35 @@ public class MainMenu {
 
     public static void show() {
 
+
+        MenuCompeticion menuCompeticion = new MenuCompeticion();
+        MainClasificacionGeneral mainClasificacionGeneral = new MainClasificacionGeneral();
+        MenuJugar menuJugar = new MenuJugar();
+
         System.out.println("MENU: ");
 
         System.out.println(" 1. Configuración de la competición ");
         System.out.println(" 2. Resultats/Palmarès/ClassificacióGeneral ");
         System.out.println(" 3. Jugar ");
-        System.out.println(" 4. Acabar ");
+        System.out.println(" 0. Acabar ");
 
         Scanner tec = new Scanner(System.in);
         int opcion = tec.nextInt();
 
         switch (opcion) {
             case 1:  {
-                MenuCompeticion.show();
+                menuCompeticion.show();
                 break;
             }
             case 2: {
-                MainClasificacionGeneral.show();
+                mainClasificacionGeneral.show();
                 break;
             }
             case 3: {
-                MenuJugar.show();
+                menuJugar.show();
                 break;
             }
-            case 4: {
+            case 0: {
                 break;
             }
         }
