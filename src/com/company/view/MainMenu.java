@@ -1,4 +1,4 @@
-package com.company;
+package com.company.view;
 
 import java.util.Scanner;
 
@@ -22,7 +22,7 @@ public class MainMenu {
                 break;
             }
             case 2: {
-                ClasificacionGeneral.show();
+                MainClasificacionGeneral.show();
                 break;
             }
             case 3: {
