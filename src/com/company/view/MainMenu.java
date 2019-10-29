@@ -6,7 +6,6 @@ public class MainMenu {
 
     public static void show() {
 
-
         MenuCompeticion menuCompeticion = new MenuCompeticion();
         MainClasificacionGeneral mainClasificacionGeneral = new MainClasificacionGeneral();
         MenuJugar menuJugar = new MenuJugar();
