@@ -12,7 +12,6 @@ public class MenuJugar {
         Scanner tec = new Scanner(System.in);
         System.out.println("Qué tipo de vehículo quieres participar : " + "Coche , Bicicleta, Moto");
         vehiculo = tec.nextLine();
-
     }
 
     public void contra(){
@@ -23,7 +22,7 @@ public class MenuJugar {
                 System.out.println("Coche");
                 break;
             case "Bicicleta":
-                System.out.println("BICI0");
+                System.out.println("BICI");
                 break;
             case "Moto":
                 System.out.println("BICI0");

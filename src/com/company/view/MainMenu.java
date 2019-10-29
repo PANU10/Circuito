@@ -13,7 +13,7 @@ public class MainMenu {
         System.out.println("MENU: ");
 
         System.out.println(" 1. Configuración de la competición ");
-        System.out.println(" 2. Resultats/Palmarès/ClassificacióGeneral ");
+        System.out.println(" 2. ClassificacióGeneral ");
         System.out.println(" 3. Jugar ");
         System.out.println(" 0. Acabar ");
 

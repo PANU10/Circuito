@@ -7,6 +7,29 @@ public class MenuCompeticion {
     private  int contadorP;
     private  int ncircuito;
 
+    public String getNombreJugador() {
+        return nombreJugador;
+    }
+
+    public void setNombreJugador(String nombreJugador) {
+        this.nombreJugador = nombreJugador;
+    }
+
+    public int getContadorP() {
+        return contadorP;
+    }
+
+    public void setContadorP(int contadorP) {
+        this.contadorP = contadorP;
+    }
+
+    public int getNcircuito() {
+        return ncircuito;
+    }
+
+    public void setNcircuito(int ncircuito) {
+        this.ncircuito = ncircuito;
+    }
 
     public  void show() {
         //El nom del jugador, qtat de participants i qtat de circuits del campionat
