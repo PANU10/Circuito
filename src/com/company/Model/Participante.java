@@ -2,31 +2,35 @@ package com.company.Model;
 
 public class Participante {
 
-    private int id;
-    private String nombre;
-    private String apellido;
+    private String nombreJugador;
+    private  int contadorP;
 
-    public int getId() {
-        return id;
+    public String getNombreJugador() {
+        return nombreJugador;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setNombreJugador(String nombreJugador) {
+        this.nombreJugador = nombreJugador;
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getContadorP() {
+        return contadorP;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setContadorP(int contadorP) {
+        this.contadorP = contadorP;
     }
 
-    public String getApellido() {
-        return apellido;
+    public int getNcircuito() {
+        return ncircuito;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setNcircuito(int ncircuito) {
+        this.ncircuito = ncircuito;
     }
+
+    private  int ncircuito;
+
+
+
 }

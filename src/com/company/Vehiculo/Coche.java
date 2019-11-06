@@ -1,4 +1,4 @@
-package com.company;
+package com.company.Vehiculo;
 
 import com.company.Model.Vehiculo;
 
