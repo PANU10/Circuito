@@ -1,5 +1,7 @@
 package com.company.view;
 
+import com.company.Model.Game;
+
 import java.util.Scanner;
 
 public class MainMenu {
@@ -8,7 +10,7 @@ public class MainMenu {
 
         MenuCompeticion menuCompeticion = new MenuCompeticion();
         MainClasificacionGeneral mainClasificacionGeneral = new MainClasificacionGeneral();
-        MenuJugar menuJugar = new MenuJugar();
+        Game menuJugar = new Game();
 
         System.out.println("MENU: ");
 

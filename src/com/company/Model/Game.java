@@ -1,17 +1,23 @@
-package com.company.view;
+package com.company.Model;
 
 import java.lang.invoke.SwitchPoint;
 import java.util.Scanner;
 
-public class MenuJugar {
+public class Game {
 
-    String vehiculo;
+    private String vehiculo;
+
+    public String getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(String vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
 
     public  void show() {
 
-        Scanner tec = new Scanner(System.in);
-        System.out.println("Qué tipo de vehículo quieres participar : " + "Coche , Bicicleta, Moto");
-        vehiculo = tec.nextLine();
     }
 
     public void contra(){
