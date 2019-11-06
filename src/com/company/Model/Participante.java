@@ -5,6 +5,7 @@ public class Participante {
     private String nombreJugador;
 
 
+
     public String getNombreJugador() {
         return nombreJugador;
     }

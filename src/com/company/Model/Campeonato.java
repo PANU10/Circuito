@@ -2,6 +2,8 @@ package com.company.Model;
 
 public class Campeonato  {
     private  int ncircuito;
+    private  int participante;
+
 
     public int getNcircuito() {
         return ncircuito;
@@ -11,13 +13,13 @@ public class Campeonato  {
         this.ncircuito = ncircuito;
     }
 
-    private int contadorP;
-
-    public void getContadorP() {
-        this.getContadorP();
+    public int getParticipante() {
+        return participante;
     }
 
-    public void setContadorP(int contadorP) {
-        this.setContadorP(contadorP);
+    public void setParticipante(int participante) {
+        this.participante = participante;
     }
+
+
 }
