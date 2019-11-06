@@ -39,7 +39,7 @@ public class MenuCompeticion {
     }
 
     public  void show() {
-        //El nom del jugador, qtat de participants i qtat de circuits del campionat
+        //El nom del jugador, qtat de participants i qtat de circuits del campionatjkjukkhj
 
         Scanner tec = new Scanner(System.in);
 
