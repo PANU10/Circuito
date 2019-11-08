@@ -4,8 +4,6 @@ public class Participante {
 
     private String nombreJugador;
 
-
-
     public String getNombreJugador() {
         return nombreJugador;
     }
@@ -13,11 +11,6 @@ public class Participante {
     public void setNombreJugador(String nombreJugador) {
         this.nombreJugador = nombreJugador;
     }
-
-
-
-
-
 
 
 }

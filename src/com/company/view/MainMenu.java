@@ -32,7 +32,7 @@ public class MainMenu {
                 break;
             }
             case 3: {
-                menuJugar.show();
+                menuJugar.start();
                 break;
             }
             case 0: {
