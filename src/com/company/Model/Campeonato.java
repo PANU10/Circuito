@@ -21,5 +21,11 @@ public class Campeonato  {
         this.participante = participante;
     }
 
-
+    @Override
+    public String toString() {
+        return "Campeonato{" +
+                "ncircuito=" + ncircuito +
+                ", participante=" + participante +
+                '}';
+    }
 }

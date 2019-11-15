@@ -2,13 +2,22 @@ package com.company.Model;
 
 public class Vehiculo {
 
+    protected Piloto[] pilotos;
     private String propietario;
     private String marca;
     private String color;
     private String ruedas;
 
+    public void start() throws InterruptedException {
+
+    }
+
     public String getPropietario() {
         return propietario;
+    }
+
+    public Piloto[] getPilotos() {
+        return pilotos;
     }
 
     public void setPropietario(String propietario) {
@@ -38,4 +47,5 @@ public class Vehiculo {
     public void setRuedas(String ruedas) {
         this.ruedas = ruedas;
     }
+
 }

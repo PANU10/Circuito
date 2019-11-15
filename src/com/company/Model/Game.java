@@ -3,43 +3,50 @@ package com.company.Model;
 import com.company.Vehiculo.Bicicleta;
 import com.company.Vehiculo.Coche;
 import com.company.Vehiculo.Moto;
+import com.company.view.MenuCompeticion;
 
 import java.lang.invoke.SwitchPoint;
 import java.util.Scanner;
 
 public class Game {
   Scanner tec = new Scanner(System.in);
-    private String vehiculo;
+    private int nombrevehiculo;
+    Vehiculo vehiculo;
+    MenuCompeticion m;
 
-    public String getVehiculo() {
+    public Game(MenuCompeticion m) {
+        this.m = m;
+    }
+
+    public Vehiculo getVehiculo() {
         return vehiculo;
     }
 
-    public void setVehiculo(String vehiculo) {
-        this.vehiculo = vehiculo;
-    }
 
 
-    public  void play() {
 
+    public  void play() throws InterruptedException {
+        Scanner in  = new Scanner(System.in);
         System.out.println("Con que vehiculo queires jugar?");
 
         System.out.println("1.COCHE\n" +
                 "2.MOTO\n" +
                 "3.BICI\n");
+        nombrevehiculo = in.nextInt();
 
-            switch (vehiculo) {
+            switch (nombrevehiculo) {
                 // V = D/T
-                case "Coche":
-                    Coche coche = new Coche();
+                case 1:
+                    Vehiculo coche = new Coche();
                     coche.start();
+
                     break;
-                case "Moto":
-                    Moto moto = new Moto();
+                case 2:
+                    Vehiculo moto = new Moto();
                     moto.start();
                     break;
-                case "Bicicleta":
-                    Bicicleta bicicleta = new Bicicleta();
+                case 3:
+                    Vehiculo bicicleta = new Bicicleta();
                     bicicleta.start();
                     break;
             }
