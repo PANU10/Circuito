@@ -9,6 +9,7 @@ public class MainMenu {
     public static void show() throws InterruptedException {
         Scanner tec = new Scanner(System.in);
 
+
         MenuCompeticion menuCompeticion = new MenuCompeticion();
         MainClasificacionGeneral mainClasificacionGeneral = new MainClasificacionGeneral();
         Game menuJugar = new Game(menuCompeticion);

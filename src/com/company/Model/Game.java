@@ -22,10 +22,7 @@ public class Game {
         return vehiculo;
     }
 
-
-
-
-    public  void play() throws InterruptedException {
+    public void play() throws InterruptedException {
         Scanner in  = new Scanner(System.in);
         System.out.println("Con que vehiculo queires jugar?");
 
@@ -37,9 +34,8 @@ public class Game {
             switch (nombrevehiculo) {
                 // V = D/T
                 case 1:
-                    Vehiculo coche = new Coche();
+                    Vehiculo coche = new Coche(m);
                     coche.start();
-
                     break;
                 case 2:
                     Vehiculo moto = new Moto();

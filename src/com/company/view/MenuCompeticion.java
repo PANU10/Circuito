@@ -15,8 +15,6 @@ public class MenuCompeticion {
     private int contadorP;
     private int ncircuito;
 
-
-
     public String getJugador() {
         return jugador;
     }
