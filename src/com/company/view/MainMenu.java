@@ -11,7 +11,6 @@ public class MainMenu {
 
 
         MenuCompeticion menuCompeticion = new MenuCompeticion();
-        MainClasificacionGeneral mainClasificacionGeneral = new MainClasificacionGeneral();
         Game menuJugar = new Game(menuCompeticion);
 
         int opcion;
@@ -31,7 +30,6 @@ public class MainMenu {
                     break;
                 }
                 case 2: {
-                    mainClasificacionGeneral.show(menuJugar.getVehiculo().getPilotos());
                     break;
                 }
                 case 3: {
@@ -42,6 +40,6 @@ public class MainMenu {
                     return;
                 }
             }
-        }while (true);
+        } while (true);
     }
 }

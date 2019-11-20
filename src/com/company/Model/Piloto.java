@@ -1,9 +1,21 @@
 package com.company.Model;
 
+import java.util.Comparator;
+
 public class Piloto implements Comparable<Piloto> {
 
     private String NombrePiloto = "";
     private int NumbrePartc;
+
+    public int getPuntos() {
+        return Puntos;
+    }
+
+    public void setPuntos(int puntos) {
+        Puntos = puntos;
+    }
+
+    private int Puntos;
 
     public String getNombrePiloto() {
         return NombrePiloto;
@@ -35,6 +47,8 @@ public class Piloto implements Comparable<Piloto> {
     public String toString() {
         return "Piloto{" +
                 "NombrePiloto='" + NombrePiloto + '\'' +
+                ", NumbrePartc=" + NumbrePartc +
+                ", Puntos=" + Puntos +
                 '}';
     }
 
@@ -46,3 +60,4 @@ public class Piloto implements Comparable<Piloto> {
         return -1;
     }
 }
+

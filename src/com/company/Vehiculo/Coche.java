@@ -2,15 +2,18 @@ package com.company.Vehiculo;
 
 import com.company.Model.Piloto;
 import com.company.Model.Vehiculo;
+import com.company.Model.Sortbypuntos;
+import com.company.view.MainClasificacionGeneral;
 import com.company.view.MenuCompeticion;
 
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Coche extends Vehiculo {
 
+    ArrayList<Piloto> listParticipantes = new ArrayList<>();
+
     MenuCompeticion menuCompeticion;
+    Sortbypuntos sortbypuntos;
 
     public Coche(MenuCompeticion menuCompeticion) {
         this.menuCompeticion = menuCompeticion;
@@ -50,11 +53,10 @@ public class Coche extends Vehiculo {
                 pilotos[i] = new Piloto();
                 coches[i] = new Coche(menuCompeticion);
 
-
                 pilotos[0].setNombrePiloto(nombre);
                 pilotos[i].setNombrePiloto("Participante " + i);
                 pilotos[i].setNumbrePartc(i);
-
+                listParticipantes.add(pilotos[i]);
             }
 
             System.out.println("¡Empieza la carrera " + (j+1) + "!" +"\n");
@@ -69,6 +71,11 @@ public class Coche extends Vehiculo {
 
             Arrays.sort(pilotos);
 
+            for (Piloto p: listParticipantes
+                 ) {
+                System.out.println(p.getNumbrePartc() + "-----" + p.getPuntos());
+            }
+
             System.out.println("Clasificación final: ");
 
 
@@ -76,13 +83,22 @@ public class Coche extends Vehiculo {
                 System.out.println(i+1+"    "+pilotos[i].getNombrePiloto()+"   "+pilotos[i].getTiempo()+" "+"Minutos");
             }
             System.out.println("---------------------------------");
+
+            for (int i = 0; i < 4 ; i++) {
+                if(listParticipantes.get(i) == listParticipantes.get(0)) listParticipantes.get(i).setPuntos(+10);
+                 else if(listParticipantes.get(i) == listParticipantes.get(1)) listParticipantes.get(i).setPuntos(+7);
+                 else if(listParticipantes.get(i) == listParticipantes.get(2))listParticipantes.get(i).setPuntos(+5);
+                 else if(listParticipantes.get(i) == listParticipantes.get(3))listParticipantes.get(i).setPuntos(+3);
+                 else if (listParticipantes.get(i) == listParticipantes.get(4)) listParticipantes.get(i).setPuntos(+1);
+            }
         }
 
+        Collections.sort(listParticipantes, sortbypuntos);
 
-
-
-
-        }
+        MainClasificacionGeneral clasificacionGeneral = new MainClasificacionGeneral(listParticipantes);
+        System.out.println("Classificacion general");
+        System.out.println(listParticipantes);
+    }
 //
 //        System.out.println("Nombre Circuito: ");
 //        Cursa.NomCursa = sc.nextLine();
