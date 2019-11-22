@@ -1,6 +1,7 @@
 package com.company.view;
 
 import com.company.Model.Game;
+import com.company.Vehiculo.Coche;
 
 import java.util.Scanner;
 
@@ -9,9 +10,10 @@ public class MainMenu {
     public static void show() throws InterruptedException {
         Scanner tec = new Scanner(System.in);
 
-
         MenuCompeticion menuCompeticion = new MenuCompeticion();
         Game menuJugar = new Game(menuCompeticion);
+
+        MainClasificacionGeneral clasificacionGeneral = new MainClasificacionGeneral(menuJugar.listParticipantes);
 
         int opcion;
         do{
@@ -20,8 +22,10 @@ public class MainMenu {
             System.out.println(" 1. Configuración de la competición ");
             System.out.println(" 2. ClassificacióGeneral ");
             System.out.println(" 3. Jugar ");
-            System.out.println(" 0. Acabar ");
+            System.out.println(" 0. Acabar " + "\n");
 
+
+            System.out.println("Elige una opción : ");
             opcion = tec.nextInt();
 
             switch (opcion) {
@@ -30,6 +34,7 @@ public class MainMenu {
                     break;
                 }
                 case 2: {
+                    clasificacionGeneral.mostrar();
                     break;
                 }
                 case 3: {

@@ -10,10 +10,17 @@ import java.util.Comparator;
 
 public class MainClasificacionGeneral{
 
-    ArrayList<Piloto> listParticipantes = new ArrayList<>();
+    ArrayList<Piloto> listParticipantes;
 
     public MainClasificacionGeneral(ArrayList<Piloto> listParticipantes) {
         this.listParticipantes = listParticipantes;
+    }
+
+    void mostrar(){
+        System.out.println("Clasificación General");
+        for (Piloto p: listParticipantes) {
+            System.out.println(p.getNombrePiloto() + "----" + p.getPuntos());
+        }
     }
 
 //    public  void show(Piloto[] pilotos) {

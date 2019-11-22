@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class Piloto implements Comparable<Piloto> {
 
-    private String NombrePiloto = "";
+    private String NombrePiloto;
     private int NumbrePartc;
 
     public int getPuntos() {
@@ -45,19 +45,17 @@ public class Piloto implements Comparable<Piloto> {
 
     @Override
     public String toString() {
-        return "Piloto{" +
-                "NombrePiloto='" + NombrePiloto + '\'' +
-                ", NumbrePartc=" + NumbrePartc +
-                ", Puntos=" + Puntos +
-                '}';
+        return " NombrePiloto = " + NombrePiloto + " Puntos = " + Puntos + '\n';
     }
 
     @Override
     public int compareTo(Piloto piloto) {
-        if (Tiempo >= piloto.getTiempo()) {
+        if (this.getTiempo() >= piloto.getTiempo()) {
             return 1;
         }
         return -1;
     }
+
+
 }
 
