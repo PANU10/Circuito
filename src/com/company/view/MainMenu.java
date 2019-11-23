@@ -20,8 +20,8 @@ public class MainMenu {
             System.out.println("MENU: ");
 
             System.out.println(" 1. Configuración de la competición ");
-            System.out.println(" 2. ClassificacióGeneral ");
-            System.out.println(" 3. Jugar ");
+            System.out.println(" 2. Jugar ");
+            System.out.println(" 3. ClassificacióGeneral ");
             System.out.println(" 0. Acabar " + "\n");
 
 
@@ -34,11 +34,11 @@ public class MainMenu {
                     break;
                 }
                 case 2: {
-                    clasificacionGeneral.mostrar();
+                    menuJugar.play();
                     break;
                 }
                 case 3: {
-                    menuJugar.play();
+                    clasificacionGeneral.mostrar();
                     break;
                 }
                 case 0: {
