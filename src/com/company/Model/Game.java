@@ -32,7 +32,7 @@ public class Game {
         escogerVehiculo();
 
         Random random = new Random();
-        System.out.println("Piloto: " + menuCompeticion.getJugador());
+        System.out.println("Piloto: " + menuCompeticion.getJugador() + "\n");
 
         for (int Timer = 4; Timer > 0; ) {
             Timer--;
@@ -40,7 +40,7 @@ public class Game {
             System.out.print(Timer + "...");
 
             if (Timer == 0) {
-                System.out.println("GO");
+                System.out.println("GO" + "\n");
             }
         }
 
@@ -56,9 +56,10 @@ public class Game {
             listParticipantes.add(piloto);
         }
 
-        for (int j = 0; j < menuCompeticion.getNcircuito(); j++) {
+        for (int j = 1; j <= menuCompeticion.getNcircuito(); j++) {
 
-            System.out.println("¡Empieza la carrera " + (j + 1) + "!" + "\n");
+            System.out.println("---------------------------------");
+            System.out.println("¡Empieza la carrera " + (j) + "!");
             System.out.println("---------------------------------");
 
             for (Piloto p : listParticipantes) {
@@ -66,9 +67,9 @@ public class Game {
                 p.setTiempo(r);
             }
 
-            Collections.sort(listParticipantes);
+            // Collections.sort(listParticipantes,sortbypuntos);
 
-            for (int k = 0; k < 5; k++) {
+            for (int k = 0; k < menuCompeticion.getContadorP(); k++) {
                 Piloto p = listParticipantes.get(k);
                 if (k == 0) {
                     p.setPuntos(p.getPuntos() + 10);
@@ -78,20 +79,20 @@ public class Game {
                     p.setPuntos(p.getPuntos() + 5);
                 } else if (k == 3) {
                     p.setPuntos(p.getPuntos() + 3);
-                } else if (k == 4) {
+                } else {
                     p.setPuntos(p.getPuntos() + 1);
                 }
             }
 
             System.out.println("Circuito " + j);
+            System.out.println("---------------------------------\n");
+
+            Collections.sort(listParticipantes, sortbypuntos);
 
             for (Piloto p : listParticipantes) {
                 System.out.println(p.getNombrePiloto() + " ---- " + p.getTiempo() + " Min " + " ---- " + p.getPuntos() + " Puntos");
             }
-            System.out.println("---------------------------------");
-
-            Collections.sort(listParticipantes, sortbypuntos);
-
+            System.out.println();
         }
 
     }
@@ -102,7 +103,8 @@ public class Game {
 
         System.out.println("1.COCHE\n" +
                 "2.MOTO\n" +
-                "3.BICI\n");
+                "3.BICI\n" +
+                "Elige una opción : ");
         nombrevehiculo = in.nextInt();
 
         switch (nombrevehiculo) {

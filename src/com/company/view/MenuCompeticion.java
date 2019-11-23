@@ -53,9 +53,6 @@ public class MenuCompeticion {
         contadorP = tec.nextInt();
         campeonato.setParticipante(contadorP);
 
-//        System.out.println("Qué tipo de vehículo quieres participar : " + "Coche , Bicicleta, Moto");
-//        vehiculoelegido = tec.nextLine();
-//        game.setVehiculo(vehiculoelegido);x
 
         System.out.println("Circuitos: ");
         ncircuito = tec.nextInt();

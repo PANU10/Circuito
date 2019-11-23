@@ -4,28 +4,28 @@ import com.company.Model.Piloto;
 import com.company.Vehiculo.Coche;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
 
 public class MainClasificacionGeneral{
 
     ArrayList<Piloto> listParticipantes;
+
 
     public MainClasificacionGeneral(ArrayList<Piloto> listParticipantes) {
         this.listParticipantes = listParticipantes;
     }
 
     void mostrar(){
-        System.out.println("Clasificación General");
-        for (Piloto p: listParticipantes) {
-            System.out.println(p.getNombrePiloto() + "----" + p.getPuntos());
-        }
-    }
+        StringBuilder sb;
+        sb = new StringBuilder();
+        sb.append("--------------------- ");
+        sb.append("Clasificación General");
+        sb.append(" ---------------------\n");
 
-//    public  void show(Piloto[] pilotos) {
-//        for (Piloto piloto : pilotos) {
-//            System.out.println(piloto.toString());
-//        }
-//    }
+        for (Piloto p: listParticipantes) {
+
+            sb.append("\n"+p.getNombrePiloto() + " tiene ---- " + p.getPuntos() + " puntos");
+        }
+        System.out.println(sb.toString());
+    }
 }
