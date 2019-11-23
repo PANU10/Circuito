@@ -53,7 +53,7 @@ public class Piloto implements Comparable<Piloto> {
         if (this.getTiempo() >= piloto.getTiempo()) {
             return 1;
         }
-        return -1;
+        return 0;
     }
 
 

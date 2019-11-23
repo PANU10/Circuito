@@ -66,8 +66,7 @@ public class Game {
                 int r = random.nextInt(200) + 50;
                 p.setTiempo(r);
             }
-
-            // Collections.sort(listParticipantes,sortbypuntos);
+            Collections.sort(listParticipantes, sortbypuntos);
 
             for (int k = 0; k < menuCompeticion.getContadorP(); k++) {
                 Piloto p = listParticipantes.get(k);
@@ -87,7 +86,6 @@ public class Game {
             System.out.println("Circuito " + j);
             System.out.println("---------------------------------\n");
 
-            Collections.sort(listParticipantes, sortbypuntos);
 
             for (Piloto p : listParticipantes) {
                 System.out.println(p.getNombrePiloto() + " ---- " + p.getTiempo() + " Min " + " ---- " + p.getPuntos() + " Puntos");
